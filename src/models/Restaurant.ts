@@ -96,6 +96,8 @@ export class Restaurant extends BaseModel {
             };
         }[];
     };
+    pcid?: string,
+    chainPenalty?: string,
     kitchens?: {
         ids: string[];
     };
