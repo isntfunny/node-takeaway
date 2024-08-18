@@ -28,6 +28,8 @@ export default {
                 {
                     _self: 'rt',
                     id: 'id',
+                    pcid: 'pcid',
+                    chainPenalty: 'chain_penalty',
                     name: 'nm',
                     tip: '!tip',
                     new: '!new',
