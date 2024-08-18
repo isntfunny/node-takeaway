@@ -27,6 +27,7 @@ export default {
             restaurants: [
                 {
                     _self: 'rt',
+                    bg: 'bg',
                     id: 'id',
                     pcid: 'pcid',
                     chainPenalty: 'chain_penalty',
