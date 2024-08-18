@@ -51,7 +51,8 @@ export class Restaurant extends BaseModel {
 
     pcid?: string;
     chainPenalty?: string;
-    
+
+    bg?: string;
     id?: string;
     name?: string;
     tip?: boolean;
