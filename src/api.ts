@@ -11,7 +11,7 @@ export class Takeaway {
         } else if (client instanceof TakeawayClient) {
             this.client = client;
         } else {
-            this.client = new TakeawayClient(new TakeawayConfig());
+            this.client = new TakeawayClient(client);
         }
     }
 

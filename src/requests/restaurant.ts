@@ -45,6 +45,8 @@ export const restaurant = (tag: string) => ({
     },
     legal: {
         _self: 'lgl',
+        col: 'col',
+        eml: 'eml',
         owner: 'own',
         commericalRegister: 'tcr',
         chamberOfCommerce: 'crn',
@@ -69,7 +71,8 @@ export const restaurant = (tag: string) => ({
         // Unknown attributes
         cim: 'cim',
         rvd: 'rvd',
-        eba: 'eba'
+        eba: 'eba',
+        scf: 'scf'
     },
     deliveryMethods: deliveryMethods('dm'),
     deliveryCosts: deliveryCosts('dc'),
@@ -106,10 +109,15 @@ export const restaurant = (tag: string) => ({
     slug: 'murl',
     cloudinaryHeader: 'cloudinaryHeader',
     // Unknown attributes
+    chainPenalty: 'chain_penalty',
+    hasTakeout: 'ht',
+    property: 'pty',
+    menuHeader: 'mh',
     ac: 'ac',
+    cph: 'cph',
+    pms: 'pms',
     ddf: 'ddf',
     pne: 'pne',
-    pty: 'pty',
     pro: 'pro',
     rci: 'rci',
     rte: 'rte',
@@ -117,6 +125,11 @@ export const restaurant = (tag: string) => ({
         _self: 'rt',
         cr: 'cr',
         prr: 'prr'
+    },
+    bms: {
+        _self: 'bms',
+        dm: 'dm',
+        pm: 'pm'
     },
     sco: 'sco',
     smid: 'smid',

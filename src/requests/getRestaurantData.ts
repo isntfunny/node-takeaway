@@ -12,12 +12,19 @@ export default {
         isLocationAccurate
     ],
     response: {
+        lgl: {
+            _self: 'lgl',
+            col: 'col',
+            eml: 'eml',
+        },
         restaurant: {
             ...restaurant('rd'),
 
             weekday: 'wd',
             currentTime: '*ct',
-            clearEmail: 'ce'
+            clearEmail: 'ce',
+            pms: 'pms',
+            cph: 'cph',
         }
     }
 };

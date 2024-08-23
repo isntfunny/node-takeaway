@@ -27,7 +27,7 @@ export class TakeawayClient {
     config: TakeawayConfig;
 
     constructor(config: TakeawayConfig) {
-        if (!config || !(config instanceof TakeawayConfig)) {
+        if (!config) {
             throw new Error('Invalid configuration');
         }
         this.config = config;
@@ -83,8 +83,7 @@ export class TakeawayClient {
         const headers = new Headers();
         headers.set('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
 
-        // Make the request
-        const response = await fetch(this.config.getUrl(), {
+        const heads = {
             method: 'POST',
             headers,
             body: parameters
@@ -92,7 +91,11 @@ export class TakeawayClient {
                 .concat([this.config.getDefaultQuery()])
                 .join('&'),
             ...options
-        });
+        };
+
+        //console.log([this.config.getUrl(), heads]);
+        // Make the request
+        const response = await fetch(this.config.getUrl(), heads);
 
         // Check if the request was successful
         if (response.status >= 200 && response.status <= 399) {

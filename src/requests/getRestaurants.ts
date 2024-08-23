@@ -1,4 +1,4 @@
-import {deliveryCosts, deliveryMethods} from './base';
+import { deliveryCosts, deliveryMethods } from './base';
 
 export default {
     parameters: ({postalCode, country, latitude, longitude, language, isLocationAccurate = '1'}) => [
@@ -24,13 +24,30 @@ export default {
                 vietnamDistrictId: 'vi',
                 vietnamCityId: 'va'
             },
+            bms: {
+                _self: 'bms',
+                dm: 'dm',
+                pm: 'pm',
+            },
             restaurants: [
                 {
                     _self: 'rt',
+
                     bg: 'bg',
                     id: 'id',
                     pcid: 'pcid',
                     chainPenalty: 'chain_penalty',
+                    menuHeader: 'mh',
+                    cloudinaryHeader: 'cloudinaryHeader',
+                    murl: 'murl',
+                    hasTakeout: 'ht',
+                    property: 'pty',
+                    scf: 'scf',
+                    pro: 'pro',
+                    tr: 'tr',
+                    edi: 'edi',
+
+
                     name: 'nm',
                     tip: '!tip',
                     new: '!new',
@@ -50,15 +67,15 @@ export default {
                     polygonStatus: 'ply',
                     kitchens: {
                         _self: 'cs',
-                        ids: ['ct']
+                        ids: [ 'ct' ]
                     },
                     subKitchens: {
                         _self: 'sc',
-                        ids: ['si']
+                        ids: [ 'si' ]
                     },
                     popularDishes: {
                         _self: 'pd',
-                        ids: ['pz']
+                        ids: [ 'pz' ]
                     },
                     sorting: {
                         _self: 'sr',
