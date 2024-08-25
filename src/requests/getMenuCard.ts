@@ -45,7 +45,8 @@ export const product = (tag: string, sizes = true) => ({
           },
     cloudinaryProduct: 'cloudinaryProduct',
     // NOTE: this field is not used in the Android app, so no clue what it is
-    ea: '$ea'
+    ea: '$ea',
+    av: 'av'
 });
 
 const foodInformation = (tag: string) => ({
