@@ -30,6 +30,20 @@ export const restaurant = (tag: string) => ({
     polygonStatus: 'ply',
     cacheKey: 'ck',
     distance: '.ds',
+    fl: {
+        _self: 'fl',
+        fi: {
+            _self: 'fi',
+            tp: 'tp',
+            vi: {
+                _self: 'vi',
+                tp: 'tp',
+                va: 'va',
+                rel: 'rel'
+            },
+            dm: 'dm'
+        }
+    },
     address: {
         _self: 'ad',
         street: 'st',
