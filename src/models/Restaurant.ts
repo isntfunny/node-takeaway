@@ -49,6 +49,7 @@ export interface Time {
 export class Restaurant extends BaseModel {
     static relationships = ['country', 'address', 'categories', 'banks'];
 
+    rvd?: string;
     chainPenalty?: string;
     hasTakeout?: number;
     property?: string;
@@ -127,7 +128,6 @@ export class Restaurant extends BaseModel {
     information?: string;
     grade?: number;
     ratingCount?: number;
-    rvd?: string;
     logoUrl?: string;
     headerImageUrl?: string;
     cacheKey?: string;

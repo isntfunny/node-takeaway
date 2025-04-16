@@ -99,7 +99,7 @@ export class Country extends BaseModel {
         return new Address(this.takeaway, data.location);
     }
 
-    async getRestaurants(postalCode: string, latitude: string, longitude: string): Promise<Restaurant[]> {
+    async getRestaurants(postalCode: string, latitude: string, longitude: string): Promise<Restaurant[]|null> {
         const data = await this.takeaway.getClient().getRestaurants({
             country: this.code,
             postalCode,
@@ -107,6 +107,11 @@ export class Country extends BaseModel {
             longitude,
             language: this.takeaway.getLanguage()
         });
+
+        if (!data.restaurants || !data.restaurants.restaurants) {
+            return null;
+        }
+
         return data.restaurants.restaurants.map((restaurant) => new Restaurant(this.takeaway, restaurant, this));
     }
 

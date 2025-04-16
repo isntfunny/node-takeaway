@@ -13,7 +13,8 @@ export const descriptions = (tag) => ({
     pt: 'pt',
     ro: 'ro',
     sv: 'sv',
-    vi: 'vi'
+    vi: 'vi',
+    sk: 'sk'
 });
 
 export const deliveryMethods = (tag) => ({
